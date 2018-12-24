@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 
-const routes = require('./routes/routes');
+const routes = require('./routes/routes').default;
 const app = express();
 
 var publicDir = require('path').join(__dirname,'/public');
