@@ -1,4 +1,4 @@
-{{> header }}
+{{>header}}
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -7,4 +7,56 @@
   </div>
 </div>
 
-{{> footer }}
+<div class="container">
+  <form>
+    <div class="form-inline">
+      <label for="cardNameSearch">Card Name</label>
+      <input type="text" class="form-control" id="cardNameSearch" placeholder="Enter Card Name">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Element</th>
+        <th scope="col">Role</th>
+        <th scope="col">Job</th>
+        <th scope="col">Category</th>
+        <th scope="col">Power</th>
+        <th scope="col">Opus</th>
+        <th scope="col">Rarity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#cards}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{cost}}</td>
+          <td>{{element}}</td>
+          <td>{{role}}</td>
+          <td>{{job}}</td>
+          <td>{{category}}</td>
+          <td>{{power}}</td>
+          <td>{{opus}}</td>
+          <td>{{rarity}}</td>
+        </tr>
+      {{/cards}}
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+
+{{>footer}}
