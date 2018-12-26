@@ -42,7 +42,7 @@ module.exports = {
             })
             .catch(next);
         
-        res.redirect('/library');
+        res.redirect('/newCard');
     },
 
     decks(req, res, next) {
