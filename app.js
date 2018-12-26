@@ -7,7 +7,7 @@ const routes = require('./routes/routes');
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/fftcg');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fftcg');
 
 var publicDir = require('path').join(__dirname,'/public');
 app.use(express.static(publicDir));
