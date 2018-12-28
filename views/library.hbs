@@ -32,8 +32,8 @@
         <th scope="col">Job</th>
         <th scope="col">Category</th>
         <th scope="col">Power</th>
-        <th scope="col">Opus</th>
-        <th scope="col">Rarity</th>
+        <th></th>
+        <th scope="col">Quantity</th>
       </tr>
     </thead>
     <tbody>
@@ -46,9 +46,11 @@
           <td>{{job}}</td>
           <td>{{category}}</td>
           <td>{{power}}</td>
-          <td>{{opus}}</td>
-          <td>{{rarity}}</td>
+          <td><button>+</button></td>
+          <td></td>
+          <td><button>-</button></td>
         </tr>
+        
       {{/cards}}
     </tbody>
   </table>
@@ -62,8 +64,5 @@
     </ul>
   </nav>
 </div>
-
-
-
 
 {{>footer}}
